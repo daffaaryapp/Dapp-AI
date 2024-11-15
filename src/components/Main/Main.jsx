@@ -12,7 +12,7 @@ const Main = () => {
 
             <div className='nav'>
                 <p>Dapp AI</p>
-                <img src={assets.user_icon} alt=''/>
+                <img src={assets.user} alt=''/>
             </div>
 
             <div className="main-container">
@@ -20,8 +20,11 @@ const Main = () => {
                 {!showResult
                 ?<>
                 <div className="greet">
-                    <p><span>Hello, Tuan Daffa</span></p>
-                    <p>ada yang bisa saya bantu</p>
+                    <a target='_blank' href="https://saweria.co/daffaaryapp">
+                        <img src={assets.bannerWide} alt="" />
+                    </a>
+                    <p className='mt-10'><span>Hello, Tuan Daffa</span></p>
+                    <p className='mb-10'>ada yang bisa saya bantu</p>
                 </div>
 
 
@@ -49,11 +52,11 @@ const Main = () => {
                 </>
                 : <div className='result'>
                     <div className="result-title">
-                        <img src={assets.user_icon} alt="" />
+                        <img src={assets.user} alt="" />
                         <p>{recentPrompt}</p>
                     </div>
                     <div className="result-data">
-                        <img src={assets.gemini_icon} alt="" />
+                        <img src={assets.ipdn} alt="" />
                         {loading
                         ?
                         <div role="status">
@@ -88,25 +91,30 @@ const Main = () => {
                     </div> */}
 
                     
-                    <label for="countries" class="mt-5 block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select your country</label>
+                    {/* <label for="countries" class="mt-5 block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select your country</label>
                     <select onChange={(e) => setSelect(e.target.value)} value={select} id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option>Pilih</option>
                         <option>Canada</option>
                         <option>France</option>
                         <option>Germany</option>
-                    </select>
+                    </select> */}
 
                     
-                    <label for="base-input" class="mt-5 block mb-2 text-sm font-medium text-gray-900 dark:text-white">Base input</label>
-                    <input onChange={(e)=>setInput(e.target.value)} value={input} type="text" id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <label for="base-input" class=" block mb-2 text-sm font-medium text-gray-900 dark:text-white">Bertanyalahh</label>
+                    <input placeholder='disini' onChange={(e)=>setInput(e.target.value)} value={input} type="text" id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
                 
-                    <button onClick={()=>onSent()}  class="mt-5 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Generate</button>
+                    <button onClick={()=>onSent()}  class="mt-5 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Gasss..</button>
 
+                    <p className='mt-10'>support kami dengan nominal berpapun, Rp10k,Rp5k</p>
+                    <div className="saweria flex mt-3">
+                        <img width={200} src={assets.saweria} alt="" />
+                        <a className='button-56' href="https://saweria.co/daffaaryapp" target='blank'>Klik Support Rp..</a>
+                    </div>
+
+                </div>
                     <p className="bottom-info">
                         by daffa aryasatya
                     </p>
-                </div>
-
             </div>
         </div>
     )

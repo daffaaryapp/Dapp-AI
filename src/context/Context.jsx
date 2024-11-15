@@ -16,22 +16,38 @@ const ContextProvider = (props) => {
     const [loading,setLoading] = useState(false);
     const [resultData,setResultData] = useState('');
 
+    const delayPara = (index,nextWord) => {
+        setTimeout(function(){
+            setResultData(prev=>prev+nextWord);
+        },75*index)
+    }
+
+    const newChat = () =>{
+        setLoading(false)
+        setShowResult(false)
+    }
+
     const  onSent = async (prompt) => {
 
         setResultData('')
-
-        const delayPara = (index,nextWord) => {
-            setTimeout(function(){
-                setResultData(prev=>prev+nextWord);
-            },75*index)
-        }
-
         setLoading(true)
         setShowResult(true)
-        setRecentPrompt(input + select)
-        const response = await runChat(input + select)
+
+        let response;
+        if(prompt !== undefined){
+            response = await runChat(prompt);
+            setRecentPrompt(prompt)
+        }
+        else{
+            setPrevPrompts(prev=>[...prev,input])
+            setRecentPrompt(input)
+            response = await runChat(input);
+        }
+        // setRecentPrompt(input + select)
+        // setPrevPrompts(prev=>[...prev,input+select])
+        // const response = await runChat(input + select)
         let responseArray = response.split('**')
-        let newResponse;
+        let newResponse='';
         for(let i=0 ; i<responseArray.length ; i++)
         {
             if(i===0 || i%2 !==1){
@@ -69,6 +85,7 @@ const ContextProvider = (props) => {
         setInput2,
         select,
         setSelect,
+        newChat
 
     }
 

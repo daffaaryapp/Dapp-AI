@@ -23,10 +23,10 @@
     align-items: center;
     gap: 10px;
     padding: 10px 15px;
-    background-color: #3f64a4;
+    background: -webkit-linear-gradient(16deg,#3ab3d6,#0b428e);
     border-radius: 50px;
     font-size: 14px;
-    color: grey;
+    color: rgb(252, 252, 252);
     cursor: pointer;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
@@ -71,4 +71,10 @@
 .sidebar .bottom-item{
     padding-right: 10px;
     cursor: pointer;
+}
+
+@media (max-width:600px){
+    .sidebar{
+        display: none;
+    }
 }
