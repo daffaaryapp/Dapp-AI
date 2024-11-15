@@ -20,12 +20,12 @@ const Main = () => {
                 {!showResult
                 ?<>
                 <div className="greet">
-                    <p><span>Hello, Sobat Dapp</span></p>
-                    <p>how can i help you today</p>
+                    <p><span>Hello, Tuan Daffa</span></p>
+                    <p>ada yang bisa saya bantu</p>
                 </div>
 
 
-                <div className="cards">
+                {/* <div className="cards">
                     <div className="card">
                         <p>suggest beautiful places to see</p>
                         <img src={assets.compass_icon} alt="" />
@@ -45,7 +45,7 @@ const Main = () => {
                         <p>suggest beautiful places to see</p>
                         <img src={assets.code_icon} alt="" />
                     </div>
-                </div>
+                </div> */}
                 </>
                 : <div className='result'>
                     <div className="result-title">
@@ -71,10 +71,10 @@ const Main = () => {
                
 
                 <div className="main-bottom">
-                    <div className="search-box">
-                        <input onChange={(e)=>setInput(e.target.value)} value={input} type="text" placeholder='Enter a prompt here' />
+                    {/* <div className="search-box"> */}
+                        {/* <input onChange={(e)=>setInput(e.target.value)} value={input} type="text" placeholder='Enter a prompt here' /> */}
                         {/* <input onChange={(e)=>setInput2(e.target.value)} value={input2} type="text" placeholder='Enter a prompt here' /> */}
-                        <select onChange={(e) => setSelect(e.target.value)} value={select}>
+                        {/* <select onChange={(e) => setSelect(e.target.value)} value={select}>
                             <option value="">Pilih opsi</option>
                             <option value="indo">indo</option>
                             <option value="arab">arab</option>
@@ -85,9 +85,25 @@ const Main = () => {
                             <img src={assets.mic_icon} alt="" />
                             <img onClick={()=>onSent()} src={assets.send_icon} alt="" />
                         </div>
-                    </div>
+                    </div> */}
+
+                    
+                    <label for="countries" class="mt-5 block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select your country</label>
+                    <select onChange={(e) => setSelect(e.target.value)} value={select} id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option>Pilih</option>
+                        <option>Canada</option>
+                        <option>France</option>
+                        <option>Germany</option>
+                    </select>
+
+                    
+                    <label for="base-input" class="mt-5 block mb-2 text-sm font-medium text-gray-900 dark:text-white">Base input</label>
+                    <input onChange={(e)=>setInput(e.target.value)} value={input} type="text" id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                
+                    <button onClick={()=>onSent()}  class="mt-5 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Generate</button>
+
                     <p className="bottom-info">
-                        gemini may display innacurate info
+                        by daffa aryasatya
                     </p>
                 </div>
 
