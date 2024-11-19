@@ -2,6 +2,7 @@ import React from 'react'
 import Sidebar from './components/Sidebar/Sidebar'
 import Main from './components/Main/Main'
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       <Sidebar/>
       <Main />
       <Analytics />
+      <SpeedInsights />
     </>
   )
 }
