@@ -12,7 +12,7 @@ const Main = () => {
 
             <div className='nav'>
                 <p>Dapp AI</p>
-                <img src={assets.user} alt=''/>
+                <img src={assets.user}  alt=''/>
             </div>
 
             <div className="main-container">
@@ -20,7 +20,7 @@ const Main = () => {
                 {!showResult
                 ?<>
                 <div className="greet">
-                    <a target='_blank' href="https://saweria.co/daffaaryapp">
+                    <a target='_blank' href="https://aryasatya28-portfolio.vercel.app/">
                         <img src={assets.bannerWide} alt="" />
                     </a>
                     <p className='mt-10'><span>Hello, Tuan Daffa</span></p>
@@ -56,7 +56,7 @@ const Main = () => {
                         <p>{recentPrompt}</p>
                     </div>
                     <div className="result-data">
-                        <img src={assets.ipdn} alt="" />
+                        <img src={assets.usdc} alt="" />
                         {loading
                         ?
                         <div role="status">
@@ -113,7 +113,7 @@ const Main = () => {
 
                 </div>
                     <p className="bottom-info">
-                        by daffa aryasatya
+                        by ncuyy
                     </p>
             </div>
         </div>

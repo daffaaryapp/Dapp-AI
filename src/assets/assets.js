@@ -17,6 +17,8 @@ import bannerWide from './bannerWide.png'
 import saweria from './saweria.png'
 import user from './user.jpg'
 import ipdn from './Logo_IPDN.png'
+import usdc from './usdc.png'
+import shiba from './shiba.png'
 
 
 export const assets = {
@@ -38,5 +40,7 @@ export const assets = {
     bannerWide,
     saweria,
     user,
-    ipdn
+    ipdn,
+    usdc,
+    shiba
 }

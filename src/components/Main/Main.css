@@ -23,6 +23,8 @@
     -o-border-radius: 50%;
 } 
 
+
+
 .main-container{
     max-width: 900px;
     margin: auto;
@@ -36,6 +38,25 @@
     padding: 20px;
     margin-top: -10px;
     margin-bottom: -20px;
+}
+
+.main .greet a img{
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.main .greet a img:hover{
+    transform: scale(1.01);
+    transition: transform .2s ease-out;
+    -moz-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    -o-transform: scale(1.01);
+    -webkit-transition: transform .2s ease-out;
+    -moz-transition: transform .2s ease-out;
+    -ms-transition: transform .2s ease-out;
+    -o-transition: transform .2s ease-out;
 }
 
 .main .greet span{
